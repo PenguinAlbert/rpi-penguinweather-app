@@ -14,11 +14,15 @@ A clean, simple weather dashboard for Raspberry Pi OS.
 ##  Installation (Raspberry Pi)
 
 1. Clone the repo
+
 git clone https://github.com/PenguinAlbert/rpi-penguinweather-app.git
+
 cd rpi-penguinweather-app
 
 2. Run the installer
+
 chmod +x setup.sh
+
 ./setup.sh
 
 ---
