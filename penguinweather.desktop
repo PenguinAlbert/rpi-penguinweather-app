@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Penguin Weather
+Comment=Weather dashboard app
+Exec=python3 /home/albertpi/rpi-penguinweather-app/main.py
+Icon=penguin
+Terminal=false
+Type=Application
+Categories=Utility;
