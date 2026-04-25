@@ -1,39 +1,26 @@
 #!/bin/bash
 
 echo "Uninstall Penguin Weather"
-echo "This will remove the app, icon, and all data."
+echo "This will remove the menu launcher, icon, and commands."
+echo "Your repo folder will be kept so you can reinstall later."
 
-read -p "Are you sure you want to continue? (y/n): " confirm
+read -p "Continue? (y/n): " confirm
 
 if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     echo "Uninstall cancelled."
     exit 0
 fi
 
-APP_FOLDER="$HOME/rpi-penguinweather-app"
 DESKTOP_FILE="$HOME/.local/share/applications/penguinweather.desktop"
 ICON_FILE="$HOME/.local/share/icons/penguin.png"
+BIN_DIR="$HOME/.local/bin"
 
-echo "Uninstalling..."
-
-# Remove launcher
-if [ -f "$DESKTOP_FILE" ]; then
-    rm "$DESKTOP_FILE"
-    echo "Removed launcher"
-fi
-
-# Remove icon
-if [ -f "$ICON_FILE" ]; then
-    rm "$ICON_FILE"
-    echo "Removed icon"
-fi
-
-# Remove app folder
-if [ -d "$APP_FOLDER" ]; then
-    rm -rf "$APP_FOLDER"
-    echo "Removed app folder"
-fi
+rm -f "$DESKTOP_FILE"
+rm -f "$ICON_FILE"
+rm -f "$BIN_DIR/penguinweather-install"
+rm -f "$BIN_DIR/penguinweather-uninstall"
 
 echo "Uninstall complete."
-echo "You may want to reboot to refresh the menu:"
-echo "sudo reboot"
+echo "App files were kept."
+echo "To reinstall, go to the repo folder and run:"
+echo "./setup.sh"
