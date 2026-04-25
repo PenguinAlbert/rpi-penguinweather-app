@@ -144,10 +144,9 @@ chmod +x uninstall.sh
 
 ## 💡 Future Ideas
 
-- Auto-detect location
-- Auto-refresh weather
-- Better UI themes
-- Cloud-synced favourites
+Feel free to enter suggestions into our suggestion box form!
+
+https://s36tayw6vpb.typeform.com/to/iTBKDK3S
 
 ---
 
