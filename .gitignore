@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Local data
+favourites.json
+
+# OS junk
+.DS_Store
