@@ -150,6 +150,6 @@ https://s36tayw6vpb.typeform.com/to/iTBKDK3S
 
 ---
 
-## 👤 Author
+# 👤 Author
 
 Made by PenguinAlbert
