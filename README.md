@@ -1,33 +1,32 @@
-# 🐧 Penguin Weather
+k# 🐧 Penguin Weather
 
 A clean, simple weather dashboard for Raspberry Pi OS.
 
-## Features
+## 🌦️ Features
 - Works worldwide (just type "City, Country")
 - Save favourite locations
 - 7-day forecast
 - Desktop app (shows in Raspberry Pi menu)
 - Custom icon included
+- Universal install/uninstall commands
 
 ---
 
-##  Installation (Raspberry Pi)
+## 📥 Installation (Raspberry Pi)
 
 1. Clone the repo
-
 git clone https://github.com/PenguinAlbert/rpi-penguinweather-app.git
-
 cd rpi-penguinweather-app
 
 2. Run the installer
-
 chmod +x setup.sh
-
 ./setup.sh
+
+After installation, global commands will be available from anywhere.
 
 ---
 
-##  Launching the App
+## 🚀 Launching the App
 
 After installing:
 
@@ -41,7 +40,7 @@ python3 main.py
 
 ---
 
-##  How to Use
+## 🧠 How to Use
 
 Type a location like:
 Sydney, Australia
@@ -58,7 +57,16 @@ Use "Remove Favourite" to delete it
 
 ---
 
-##  Compatibility
+## ⚡ Universal Commands
+
+After running the installer, you can use these commands from anywhere:
+
+penguinweather-install
+penguinweather-uninstall
+
+---
+
+## 💻 Compatibility
 
 This app works on multiple operating systems as long as Python is installed.
 
@@ -88,7 +96,7 @@ python main.py
 
 ---
 
-##  Project Structure
+## 📁 Project Structure
 
 rpi-penguinweather-app/
 ├── main.py
@@ -102,23 +110,18 @@ rpi-penguinweather-app/
 
 ---
 
-
-
 ## 🗑️ Uninstall
 
 Run:
+penguinweather-uninstall
 
-./uninstall.sh
-
-If permission is denied:
-
+Or manually:
 chmod +x uninstall.sh
-
 ./uninstall.sh
 
 ---
 
-##  Notes
+## ⚠️ Notes
 
 - Favourites are stored locally (favourites.json)
 - Not synced between devices
@@ -126,7 +129,7 @@ chmod +x uninstall.sh
 
 ---
 
-##  Future Ideas
+## 💡 Future Ideas
 
 - Auto-detect location
 - Auto-refresh weather
@@ -135,6 +138,6 @@ chmod +x uninstall.sh
 
 ---
 
-##  Author
+## 👤 Author
 
 Made by PenguinAlbert
