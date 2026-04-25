@@ -2,16 +2,15 @@
 
 A clean, simple weather dashboard for Raspberry Pi OS.
 
-## 🌦️ Features
+## Features
 - Works worldwide (just type "City, Country")
 - Save favourite locations
 - 7-day forecast
 - Desktop app (shows in Raspberry Pi menu)
-- Custom icon included
 
 ---
 
-## 📥 Installation (Raspberry Pi)
+## Installation (Raspberry Pi)
 
 1. Clone the repo
 git clone https://github.com/PenguinAlbert/rpi-penguinweather-app.git
@@ -23,7 +22,7 @@ chmod +x setup.sh
 
 ---
 
-## 🚀 Launching the App
+## Launching the App
 
 After installing:
 
@@ -37,7 +36,7 @@ python3 main.py
 
 ---
 
-## 🧠 How to Use
+## How to Use
 
 Type a location like:
 Sydney, Australia
@@ -54,18 +53,6 @@ Use "Remove Favourite" to delete it
 
 ---
 
-## 📁 Project Structure
-
-rpi-penguinweather-app/
-main.py
-Icons
-    penguin.png
-setup.sh
-README.md
-.gitignore
-
----
-
 ## Notes
 
 - Favourites are stored locally (favourites.json)
@@ -74,6 +61,6 @@ README.md
 
 ---
 
-## 👤 Author
+## Author
 
 Made by PenguinAlbert
