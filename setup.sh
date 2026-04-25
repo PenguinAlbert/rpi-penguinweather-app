@@ -1,7 +1,9 @@
-#!/bin/bash
+kk#!/bin/bash
 
 echo "Install Penguin Weather"
-read -p "Continue? (y/n): " confirm
+echo "This will install the app, icon, dependencies, and menu launcher."
+
+read -p "Are you sure you want to continue? (y/n): " confirm
 
 if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
     echo "Install cancelled."
@@ -18,21 +20,24 @@ echo "Installing dependencies..."
 sudo apt update
 sudo apt install -y python3-venv python3-tk fonts-noto-color-emoji
 
+echo "Setting up Python environment..."
+
 cd "$APP_FOLDER" || {
     echo "Error: Could not find $APP_FOLDER"
     exit 1
 }
 
-echo "Setting up Python environment..."
 python3 -m venv venv
 source venv/bin/activate
 pip install requests
 
 echo "Installing icon..."
+
 mkdir -p "$ICON_DIR"
 cp Icons/penguin.png "$ICON_FILE"
 
 echo "Creating menu launcher..."
+
 mkdir -p "$HOME/.local/share/applications"
 
 cat > "$DESKTOP_FILE" <<EOF
@@ -49,6 +54,7 @@ EOF
 chmod +x "$DESKTOP_FILE"
 
 echo "Creating universal commands..."
+
 mkdir -p "$BIN_DIR"
 
 cat > "$BIN_DIR/penguinweather-install" <<EOF
@@ -66,9 +72,23 @@ EOF
 chmod +x "$BIN_DIR/penguinweather-install"
 chmod +x "$BIN_DIR/penguinweather-uninstall"
 
+echo "Checking PATH for ~/.local/bin..."
+
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    echo "Added ~/.local/bin to PATH"
+    echo "Restart your terminal or run: source ~/.bashrc"
+else
+    echo "~/.local/bin already in PATH"
+fi
+
 echo "Install complete."
-echo "You can now run:"
+echo "Penguin Weather should now appear in your Raspberry Pi OS menu."
+echo "You can run:"
 echo "penguinweather-install"
 echo "penguinweather-uninstall"
 echo ""
-echo "If the commands do not work, restart your terminal or reboot."
+echo "If commands don’t work yet, run:"
+echo "source ~/.bashrc"
+echo "Or reboot:"
+echo "sudo reboot"
