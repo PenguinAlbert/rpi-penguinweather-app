@@ -1,6 +1,32 @@
 # 🐧 Penguin Weather
 
-A clean, simple weather dashboard for Raspberry Pi OS.
+## 💻 Compatibility
+
+This app works on multiple operating systems as long as Python is installed.
+
+### Supported Systems
+- Raspberry Pi OS (fully supported with installer and menu integration)
+- Linux (Ubuntu, Debian, etc.)
+- macOS
+- Windows
+
+### Requirements
+- Python 3
+- Tkinter (usually included with Python)
+- requests library
+
+### Running on macOS / Linux / Windows
+
+Install dependencies:
+pip install requests
+
+Run the app:
+python main.py
+
+### Notes
+- The setup.sh installer only works on Raspberry Pi OS / Linux
+- Menu integration (.desktop file) only works on Linux
+- On macOS and Windows, the app must be run manually from the terminal
 
 ## Features
 - Works worldwide (just type "City, Country")
