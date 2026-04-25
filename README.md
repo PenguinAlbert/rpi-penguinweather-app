@@ -57,12 +57,12 @@ Use "Remove Favourite" to delete it
 ## 📁 Project Structure
 
 rpi-penguinweather-app/
-├── main.py
-├── Icons/
-│   └── penguin.png
-├── setup.sh
-├── README.md
-├── .gitignore
+main.py
+Icons
+    penguin.png
+setup.sh
+README.md
+.gitignore
 
 ---
 
