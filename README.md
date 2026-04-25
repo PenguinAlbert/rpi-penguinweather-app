@@ -1,38 +1,13 @@
 # 🐧 Penguin Weather
 
-## 💻 Compatibility
-
-This app works on multiple operating systems as long as Python is installed.
-
-### Supported Systems
-- Raspberry Pi OS (fully supported with installer and menu integration)
-- Linux (Ubuntu, Debian, etc.)
-- macOS
-- Windows
-
-### Requirements
-- Python 3
-- Tkinter (usually included with Python)
-- requests library
-
-### Running on macOS / Linux / Windows
-
-Install dependencies:
-pip install requests
-
-Run the app:
-python main.py
-
-### Notes
-- The setup.sh installer only works on Raspberry Pi OS / Linux
-- Menu integration (.desktop file) only works on Linux
-- On macOS and Windows, the app must be run manually from the terminal
+A clean, simple weather dashboard for Raspberry Pi OS.
 
 ## Features
 - Works worldwide (just type "City, Country")
 - Save favourite locations
 - 7-day forecast
 - Desktop app (shows in Raspberry Pi menu)
+- Custom icon included
 
 ---
 
@@ -79,14 +54,65 @@ Use "Remove Favourite" to delete it
 
 ---
 
+## Compatibility
+
+This app works on multiple operating systems as long as Python is installed.
+
+### Supported Systems
+- Raspberry Pi OS (fully supported with installer and menu integration)
+- Linux (Ubuntu, Debian, etc.)
+- macOS
+- Windows
+
+### Requirements
+- Python 3
+- Tkinter (usually included with Python)
+- requests library
+
+### Running on macOS / Linux / Windows
+
+Install dependencies:
+pip install requests
+
+Run the app:
+python main.py
+
+### Notes
+- The setup.sh installer only works on Raspberry Pi OS / Linux
+- Menu integration (.desktop file) only works on Linux
+- On macOS and Windows, the app must be run manually from the terminal
+
+---
+
+## 📁 Project Structure
+
+rpi-penguinweather-app/
+├── main.py
+├── Icons/
+│   └── penguin.png
+├── setup.sh
+├── README.md
+├── .gitignore
+
+---
+
 ## Notes
 
 - Favourites are stored locally (favourites.json)
 - Not synced between devices
-- Requires Raspberry Pi OS with desktop (GUI)
+- Requires Raspberry Pi OS with desktop (GUI) for full experience
 
 ---
 
-## Author
+## Future Ideas
+
+- Auto-detect location
+- Auto-refresh weather
+- Better UI themes
+- Cloud-synced favourites
+
+---
+
+# Author
 
 Made by PenguinAlbert
