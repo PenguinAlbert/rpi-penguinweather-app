@@ -1,4 +1,4 @@
-k# 🐧 Penguin Weather
+# 🐧 Penguin Weather
 
 A clean, simple weather dashboard for Raspberry Pi OS.
 
